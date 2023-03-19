@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P4EXAMEN119020051.Views.PageLisGeo">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            <StackLayout>
+                
+                <CollectionView x:Name="Listlocal"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="listlocal_SelectionChanged">
+                    
+                     <CollectionView.ItemsLayout>
+                     <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+                     </CollectionView.ItemsLayout>
+
+                     <CollectionView.ItemTemplate>
+                          <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Descripcion_corta}" />
+
+                                <Label Text="{Binding Latitud}" />
+
+                                <Label Text="{Binding Logitud}" />
+
+                            </StackLayout>
+                           </DataTemplate>
+                         </CollectionView.ItemTemplate>
+                </CollectionView>
+            
+            </StackLayout>
+
+           </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
